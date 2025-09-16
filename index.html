@@ -1,0 +1,184 @@
+<!DOCTYPE html5>
+<html lang="ru">
+
+<head>
+    <title> Task 1 </title>
+</head>
+
+<body>
+    <p>
+        <a href="http://kubsu.ru/"> абсолютная гиперссылка на главную страницу сайта КубГУ</a>
+    </p>
+    <p>
+        <a href="https://kubsu.ru/">абсолютная гиперссылка на главную страницу сайта КубГУ(в протоколе https)</a>
+    </p>
+
+    <figure>
+        <a href="image.jpg"> <img src="image.jpg" alt="Цветок" style="width: 600px;"> </a>
+        <figcaption> Изображение цветка </figcaption>
+    </figure>
+    <p>
+        <a href="https://www.kubsu.ru/ab">КубГУ</a>
+    </p>
+    <p>
+        <a href="https://kubsu.ru">КубГУ</a>
+    </p>
+    <p>
+        <a id="s1"> Фрагмент текущей страницы </a>
+        <br>
+        <a href="#s1"> Перейти к фрагменту</a>
+    </p>
+    <p>
+        <a href="https://www.kubsu.ru/ru/search/content">Поиск на сайте</a>
+    </p>
+    <p>
+        <a href="https://www.kubsu.ru/ru/news/12345?id=67890">Новости</a>
+    </p>
+
+    <p>
+        <a href="https://www.kubsu.ru/#:~:text=%D1%81%2009%3A00%20%D0%B4%D0%BE%2013%3A00%2C%20%D1%81%2013%3A30%20%D0%B4%D0%BE%2018%3A00"> ссылка с параметром id в URL </a>
+    </p>
+
+    <p>
+        <a href="catalog.html">текущий каталог</a>
+    </p>
+    <p>
+        <a href="about/contacts.html">каталог about</a>
+    </p>
+    <!-- 11-12 сделаны для страницы сайта КубГУ https://www.kubsu.ru/ru/university/departments -->
+    <p>
+        <a href="../"> Ссылка на уровень выше </a>
+    </p>
+
+    <p>
+        <a href="../../"> Ссылка на 2 уровня выше </a>
+    </p>
+
+    <p>
+        Данная ссылка предназначена  <a href="https://www.kubsu.ru/ru/abiturient">абитуриентам</a>,
+        переходя по ней,вы получите всю нужную информацию.
+    </p>
+    <p>
+        <img src="image.jpg" width="600" height="300" usemap="#map1" alt="Картинка">
+    </p>
+    <map name="map1">
+        <area shape="circle" coords="300, 130, 60" href="../result/circle-s.html" target="_blank"> 
+    </map>
+    <br>
+    <p>
+        <img src="image.jpg" width="600" height="300" usemap="#map1" alt="Картинка">
+    </p>
+    <map name="map1">
+        <area shape="rectangle" coords="300, 130, 60" href="../result/circle-s.html" target="_blank"> 
+    </map>
+
+    <p>
+        <a href="##"> Каталог1 </a>
+    </p>
+
+    <p>
+        <a> Каталог2 </a>
+    </p>
+
+    <p>
+        <form action="http://kubsu.ru/" method="get" target="_blank">
+            <button type="submit" class="link-button"> Посетить сайт КубГУ</button>
+        </form>
+    </p>
+
+    <p>
+        <a href="https://example.com/" rel="nofollow"> запрещен переход поисковикам </a>
+    </p>
+
+    <p>
+        <noindex>запрещенная для индексации</noindex>
+    </p>
+
+    <h2> Нумерованный список </h2>
+    <ol>
+        <li> Title1 </li>
+        <li> Title2 </li>
+        <li> Title3 </li>
+    </ol>
+
+    <p>
+        <a href="ftp://s0195823:pass456@ftp.myserver.com/1/reg.txt"> FTP</a>
+    </p>
+</body>
+<h2>ФОРМА</h2>
+<head>
+ <body>
+    <form>
+        <div class="personal-data">
+            <h3>Персональные данные</h3>
+            
+            <div class="form-group">
+                <label>ФИО:</label>
+                <input type="text" name="fio" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Телефон:</label>
+                <input type="tel" name="phone" required>
+            </div>
+            
+            <div class="form-group">
+                <label>E-mail:</label>
+                <input type="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Дата рождения:</label>
+                <input type="date" name="birthdate" required>
+            </div>
+        </div>
+        
+        <!-- Пол -->
+        <div class="form-group">
+            <label>Пол:</label>
+            <div>
+                <input type="radio" name="gender" value="male" id="male" required>
+                <label for="male" style="display: inline; font-weight: normal;">Мужской</label>
+                
+                <input type="radio" name="gender" value="female" id="female">
+                <label for="female" style="display: inline; font-weight: normal;">Женский</label>
+            </div>
+        </div>
+        
+        <!-- Любимый язык программирования -->
+        <div class="form-group">
+                <label>Любимый язык программирования:</label>
+                <select name="languages[]" multiple="multiple">
+                    <option value="pascal">Pascal</option>
+                    <option value="c">C</option>
+                    <option value="cpp">C++</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="php">PHP</option>
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                    <option value="haskel">Haskel</option>
+                    <option value="clojure">Clojure</option>
+                    <option value="prolog">Prolog</option>
+                    <option value="scala">Scala</option>
+                </select>
+                <div><small>Для выбора нескольких вариантов удерживайте Ctrl (Cmd на Mac)</small></div>
+            </div>
+        
+        <!-- Биография -->
+        <div class="form-group">
+            <label>Биография:</label>
+            <textarea name="bio" rows="5" required></textarea>
+        </div>
+        
+        <!-- Чекбокс согласия -->
+       <br /><label><input type="checkbox" checked="checked"
+name="С контрактом ознакомлен" />С контрактом ознакомлен</label><br />
+        
+        <!-- Кнопка отправки -->
+        <div>
+            <button type="submit">Сохранить</button>
+        </div>
+    </form>
+</body>
+</head>
+</html>
