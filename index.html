@@ -1,5 +1,12 @@
-<!DOCTYPE html5>
+<!DOCTYPE html>
 <html lang="ru">
+     <title>Задание 1 - Разработка пользовательского Web-интерфейса</title>
+</head>
+<body>
+    <h1>Разработка пользовательского Web-интерфейса</h1>
+
+
+    <h2>ЗАДАНИЕ 1</h2>
 
 <head>
     <title> Task 1 </title>
@@ -61,7 +68,7 @@
     <p>
         <img src="image.jpg" width="600" height="300" usemap="#map1" alt="Картинка">
     </p>
-    <map name="map1">
+    <map name="map2">
         <area shape="circle" coords="300, 130, 60" href="../result/circle-s.html" target="_blank"> 
     </map>
     <br>
@@ -91,94 +98,82 @@
     </p>
 
     <p>
-        <noindex>запрещенная для индексации</noindex>
+        <li> <a href="https://www.kubsu.ru/">Ссылка, запрещенная для индексации</a> </li>
+
     </p>
 
     <h2> Нумерованный список </h2>
-    <ol>
-        <li> Title1 </li>
-        <li> Title2 </li>
-        <li> Title3 </li>
-    </ol>
+     <li> <ol>
+                 <li><a href="http://www.kubsu.ru">Title1</a></li>
+                 <li><a href="http://www.kubsu.ru">Title2</a></li>
+                 <li><a href="http://www.kubsu.ru">Title3</a></li>
+            </ol>
+        </li>
 
-    <p>
-        <a href="ftp://s0195823:pass456@ftp.myserver.com/1/reg.txt"> FTP</a>
-    </p>
+        <li><a href="ftp://s0195835:pass456@ftp.myserver.com/1/reg.txt">Ссылка на FTP сервер</a></li>
+
+    </ul>
 </body>
-<h2>ФОРМА</h2>
-<head>
- <body>
+ <h3>ФОРМА</h3>
     <form>
-        <div class="personal-data">
-            <h3>Персональные данные</h3>
-            
-            <div class="form-group">
-                <label>ФИО:</label>
-                <input type="text" name="fio" required>
-            </div>
-            
-            <div class="form-group">
-                <label>Телефон:</label>
-                <input type="tel" name="phone" required>
-            </div>
-            
-            <div class="form-group">
-                <label>E-mail:</label>
-                <input type="email" name="email" required>
-            </div>
-            
-            <div class="form-group">
-                <label>Дата рождения:</label>
-                <input type="date" name="birthdate" required>
-            </div>
+        <h3>Персональные данные</h3>
+        
+        <!-- ФИО -->
+        <div>
+            <label>ФИО:</label>
+            <input type="text" name="fio" required 
+                   oninvalid="this.setCustomValidity('пожалуйста, заполните данное поле')"
+                   oninput="this.setCustomValidity('')">
+        </div>
+        
+        <!-- Телефон -->
+        <div>
+            <label>Телефон:</label>
+            <input type="tel" name="phone" required 
+                   pattern="[0-9]+"
+                   oninvalid="this.setCustomValidity('пожалуйста вводите только цифры')"
+                   oninput="this.setCustomValidity('')">
+        </div>
+        
+        <!-- E-mail -->
+        <div>
+            <label>E-mail:</label>
+            <input type="email" name="email" required 
+                   oninvalid="this.setCustomValidity('введите пожалуйста @')"
+                   oninput="this.setCustomValidity('')">
+        </div>
+        
+        <!-- Дата рождения -->
+        <div>
+            <label>Дата рождения:</label>
+            <input type="date" name="birthdate" required 
+                   oninvalid="this.setCustomValidity('пожалуйста, заполните данное поле')"
+                   oninput="this.setCustomValidity('')">
         </div>
         
         <!-- Пол -->
-        <div class="form-group">
-            <label>Пол:</label>
-            <div>
-                <input type="radio" name="gender" value="male" id="male" required>
-                <label for="male" style="display: inline; font-weight: normal;">Мужской</label>
-                
-                <input type="radio" name="gender" value="female" id="female">
-                <label for="female" style="display: inline; font-weight: normal;">Женский</label>
-            </div>
+        <div>
+            <label>Пол:</label><br>
+            <input type="radio" name="gender" value="male" required> Мужской
+            <input type="radio" name="gender" value="female"> Женский
         </div>
-        
-        <!-- Любимый язык программирования -->
-        <div class="form-group">
-                <label>Любимый язык программирования:</label>
-                <select name="languages[]" multiple="multiple">
-                    <option value="pascal">Pascal</option>
-                    <option value="c">C</option>
-                    <option value="cpp">C++</option>
-                    <option value="javascript">JavaScript</option>
-                    <option value="php">PHP</option>
-                    <option value="python">Python</option>
-                    <option value="java">Java</option>
-                    <option value="haskel">Haskel</option>
-                    <option value="clojure">Clojure</option>
-                    <option value="prolog">Prolog</option>
-                    <option value="scala">Scala</option>
-                </select>
-                <div><small>Для выбора нескольких вариантов удерживайте Ctrl (Cmd на Mac)</small></div>
-            </div>
         
         <!-- Биография -->
-        <div class="form-group">
-            <label>Биография:</label>
-            <textarea name="bio" rows="5" required></textarea>
-        </div>
-        
-        <!-- Чекбокс согласия -->
-       <br /><label><input type="checkbox" checked="checked"
-name="С контрактом ознакомлен" />С контрактом ознакомлен</label><br />
-        
-        <!-- Кнопка отправки -->
         <div>
-            <button type="submit">Сохранить</button>
+            <label>Биография:</label>
+            <textarea name="bio" required 
+                     oninvalid="this.setCustomValidity('пожалуйста, заполните данное поле')"
+                     oninput="this.setCustomValidity('')"></textarea>
         </div>
+        
+        <!-- Согласие -->
+        <div>
+            <input type="checkbox" name="agreement" required> 
+            <label>С контрактом ознакомлен</label>
+        </div>
+        
+        <br>
+        <button type="submit">Сохранить</button>
     </form>
 </body>
-</head>
 </html>
