@@ -216,28 +216,3 @@ button:hover {
     margin-top: 30px;
 }
 
-/* Адаптивность */
-@media (max-width: 768px) {
-    .container {
-        width: 95%;
-    }
-    
-    .menu {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .menu li {
-        margin: 5px 0;
-    }
-    
-    #header .container {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .logo img {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-}
