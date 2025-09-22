@@ -1,0 +1,243 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    color: #333;
+    background-color: #fff;
+}
+
+.container {
+    width: 90%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* Шапка */
+#header {
+    background-color: #5792ce;
+    color: white;
+    padding: 15px 0;
+}
+
+#header .container {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+.site-title h1 {
+    font-size: 20px;
+}
+
+/* Навигация */
+#nav {
+    background-color: #5792ce;
+    padding: 10px 0;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.menu li {
+    margin: 0 10px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+/* Основное содержимое */
+#main {
+    padding: 20px 0;
+}
+
+#main section {
+    margin-bottom: 30px;
+    background: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+h2 {
+    color: #336699;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+h3 {
+    color: #4477aa;
+    margin: 15px 0 10px 0;
+}
+
+/* Список ссылок */
+.links-list {
+    list-style: decimal;
+    margin-left: 20px;
+}
+
+.links-list li {
+    margin: 10px 0;
+    padding: 5px;
+}
+
+.links-list a {
+    color: #336699;
+    text-decoration: none;
+}
+
+.links-list a:hover {
+    text-decoration: underline;
+}
+
+figure {
+    margin: 10px 0;
+    text-align: center;
+}
+
+figure img {
+    max-width: 100%;
+    border: 1px solid #ddd;
+}
+
+figcaption {
+    color: #666;
+    margin-top: 5px;
+}
+
+.noindex {
+    background-color: #f0f0f0;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Таблица */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+.data-table th,
+.data-table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.data-table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.data-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Форма */
+.user-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="email"],
+.form-group input[type="date"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+.radio-group {
+    margin: 5px 0;
+}
+
+.radio-group label {
+    display: inline;
+    font-weight: normal;
+    margin-right: 15px;
+}
+
+.help-text {
+    font-size: 12px;
+    color: #666;
+    margin-top: 3px;
+}
+
+button {
+    background-color: #336699;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4477aa;
+}
+
+/* Подвал */
+#footer {
+    background-color: #336699;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    
+    .menu {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .menu li {
+        margin: 5px 0;
+    }
+    
+    #header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .logo img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
