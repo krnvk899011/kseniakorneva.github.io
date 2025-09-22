@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 2 - Разработка пользовательского Web-интерфейса</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <img src="image2.png" alt="Логотип сайта">
+            </div>
+            <div class="site-title">
+                <h1>Разработка пользовательского Web-интерфейса</h1>
+            </div>
+        </div>
+    </header>
+
+    <nav id="nav">
+        <div class="container">
+            <ul class="menu">
+                <li><a href="#links">Ссылки</a></li>
+                <li><a href="#table">Таблица</a></li>
+                <li><a href="#form">Форма</a></li>
+                <li><a href="#footer">Контакты</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Основное содержимое -->
+    <main id="main">
+        <div class="container">
+            <section id="links">
+                <h2>Список гиперссылок</h2>
+                
+                <ul class="links-list">
+                    <li> <a href="http://kubsu.ru/" title="Абсолютная ссылка на КубГУ">абсолютная гиперссылка на главную страницу сайта КубГУ</a></li>
+                    
+                    <li> <a href="https://kubsu.ru/" title="Абсолютная HTTPS ссылка на КубГУ">абсолютная гиперссылка на главную страницу сайта КубГУ(в протоколе https)</a></li>
+                    
+                    <li> 
+                        <figure>
+                            <a href="https://skillbox.ru/media/code/teg-img-v-html-dlya-vstavki-kartinok-atributy-primery-ispolzovaniya/#stk-1"><img src="https://cdn.skillbox.pro/wbd-front/skillbox-static/skillbox.svg" alt=Skillbox></a>
+                            
+                        </figure>
+                    </li>
+                    
+                    <li> <a href="https://www.kubsu.ru/ab" title="Сокращенная ссылка">КубГУ</a></li>
+                    
+                    <li> <a href="https://kubsu.ru" title="Сокращенная ссылка на главную">КубГУ</a></li>
+                    
+                    <li>
+                        <a id="s1">Фрагмент текущей страницы</a>
+                        <br>
+                        <a href="#s1" title="Перейти к фрагменту">Перейти к фрагменту</a>
+                    </li>
+                    
+                    <li> <a href="https://www.kubsu.ru/ru/search/content" title="Поиск на сайте">Поиск на сайте</a></li>
+                    
+                    <li> <a href="https://www.kubsu.ru/ru/news/12345?id=67890" title="Новости с параметрами">Новости</a></li>
+                    
+                    <li> <a href="https://www.kubsu.ru/#:~:text=%D1%81%2009%3A00%20%D0%B4%D0%BE%2013%3A00%2C%20%D1%81%2013%3A30%20%D0%B4%D0%BE%2018%3A00" title="Ссылка с параметром">ссылка с параметром id в URL</a></li>
+                    
+                    <li> <a href="catalog.html" title="Текущий каталог">текущий каталог</a></li>
+                    
+                    <li> <a href="about/contacts.html" title="Каталог about">каталог about</a></li>
+                    
+                    <li> <a href="../" title="Уровень выше">Ссылка на уровень выше</a></li>
+                    
+                    <li> <a href="../../" title="Два уровня выше">Ссылка на 2 уровня выше</a></li>
+                    
+                    <li> Данная ссылка предназначена <a href="https://www.kubsu.ru/ru/abiturient" title="Для абитуриентов">абитуриентам</a>, переходя по ней,вы получите всю нужную информацию.</li>
+                    
+                     <li> <img src="image2.png" alt="Логотип КубГУ"  width="300" height="300" usemap="#Map1">
+            
+             <map name="Map1"> 
+                <area shape="circle" coords="150,100,100" href="https://kubsu.ru/" alt="Логотип КубГУ" title="Перейти на официальный сайт">
+                <area shape="rect" coords="50,180,250,250" href="https://www.kubsu.ru/ru/university" alt="Название КубГУ" title="Перейти на страницу об университете">
+             </map> <br>
+             Нажмите на логотип, чтобы перейти на сайт КубГУ, или нажмите на надпись, чтобы перейти на страницу "Об университете". 
+        </li>
+                    
+                    <li> <a href="#" title="Пустая ссылка">Каталог1</a></li>
+                    
+                    <li> <a title="Ссылка без href">Каталог2</a></li>
+                    
+                    <li> 
+                        <form action="http://kubsu.ru/" method="get" target="_blank">
+                            <button type="submit" class="link-button">Посетить сайт КубГУ</button>
+                        </form>
+                    </li>
+                    
+                    <li> <a href="https://example.com/" rel="nofollow" title="Запрещенная для поисковиков">запрещен переход поисковикам</a></li>
+                    
+                    <li> 
+                        <div class="noindex">
+                            <meta name="robots" content="noindex">
+                            запрещенная для индексации
+                        </div>
+                    </li>
+                    
+                    <li> 
+                        <h3>Нумерованный список</h3>
+                        <ol>
+                            <li><a href="http://www.kubsu.ru" title="Title1">Title1</a></li>
+                            <li><a href="http://www.kubsu.ru" title="Title2">Title2</a></li>
+                            <li><a href="http://www.kubsu.ru" title="Title3">Title3</a></li>
+                        </ol>
+                        <a href="ftp://s0195835:pass456@ftp.myserver.com/1/reg.txt" title="FTP ссылка">Ссылка на FTP сервер</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="table">
+                <h2>ТАБЛИЦА</h2>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Наименование</th>
+                            <th>Категория</th>
+                            <th>Цена</th>
+                            <th>Количество</th>
+                            <th>Статус</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>Ноутбук ASUS</td>
+                            <td>Электроника</td>
+                            <td>45 000 ₽</td>
+                            <td>12</td>
+                            <td>В наличии</td>
+                        </tr>
+                        <tr>
+                            <td>002</td>
+                            <td>Смартфон Samsung</td>
+                            <td>Электроника</td>
+                            <td>25 000 ₽</td>
+                            <td>8</td>
+                            <td>В наличии</td>
+                        </tr>
+                        <tr>
+                            <td>003</td>
+                            <td>Наушники Sony</td>
+                            <td>Аксессуары</td>
+                            <td>8 500 ₽</td>
+                            <td>25</td>
+                            <td rowspan="2">Ожидается</td>
+                        </tr>
+                        <tr>
+                            <td>004</td>
+                            <td>Мышь беспроводная</td>
+                            <td>Аксессуары</td>
+                            <td>2 300 ₽</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>005</td>
+                            <td>Монитор Dell</td>
+                            <td>Электроника</td>
+                            <td>18 000 ₽</td>
+                            <td>5</td>
+                            <td>В наличии</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Итого товаров:</td>
+                            <td>98 800 ₽</td>
+                            <td>50</td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="form">
+                <h2>ФОРМА</h2>
+                <form class="user-form">
+                    <h3>Персональные данные</h3>
+                    
+                    <div class="form-group">
+                        <label for="fio">ФИО:</label>
+                        <input type="text" id="fio" name="fio" required 
+                               oninvalid="this.setCustomValidity('пожалуйста, заполните данное поле')"
+                               oninput="this.setCustomValidity('')">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Телефон:</label>
+                        <input type="tel" id="phone" name="phone" required 
+                               pattern="[0-9]+"
+                               oninvalid="this.setCustomValidity('пожалуйста вводите только цифры')"
+                               oninput="this.setCustomValidity('')">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required 
+                               oninvalid="this.setCustomValidity('введите пожалуйста @')"
+                               oninput="this.setCustomValidity('')">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="birthdate">Дата рождения:</label>
+                        <input type="date" id="birthdate" name="birthdate" required 
+                               oninvalid="this.setCustomValidity('пожалуйста, заполните данное поле')"
+                               oninput="this.setCustomValidity('')">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Пол:</label>
+                        <div class="radio-group">
+                            <input type="radio" id="male" name="gender" value="male" required>
+                            <label for="male">Мужской</label>
+                            
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Женский</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="languages">Любимый язык программирования:</label>
+                        <select id="languages" name="languages[]" multiple size="6">
+                            <option value="pascal">Pascal</option>
+                            <option value="c">C</option>
+                            <option value="cpp">C++</option>
+                            <option value="javascript">JavaScript</option>
+                            <option value="php">PHP</option>
+                            <option value="python">Python</option>
+                            <option value="java">Java</option>
+                            <option value="haskel">Haskel</option>
+                            <option value="clojure">Clojure</option>
+                            <option value="prolog">Prolog</option>
+                            <option value="scala">Scala</option>
+                        </select>
+                        <div class="help-text">Для множественного выбора удерживайте Ctrl (Cmd на Mac)</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="bio">Биография:</label>
+                        <textarea id="bio" name="bio" rows="5" required 
+                                 oninvalid="this.setCustomValidity('пожалуйста, заполните данное поле')"
+                                 oninput="this.setCustomValidity('')"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="checkbox" id="agreement" name="agreement" required>
+                        <label for="agreement">С контрактом ознакомлен</label>
+                    </div>
+                    
+                    <button type="submit">Сохранить</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer id="footer">
+        <div class="container">
+            <p>&copy; Корнева Ксения ПМ 22/1</p>
+            <p>Разработка пользовательского Web-интерфейса</p>
+        </div>
+    </footer>
+</body>
+</html>
