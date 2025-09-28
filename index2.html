@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Задание 2 - Разработка пользовательского Web-интерфейса</title>
+    <title>Задание 3 - Разработка пользовательского Web-интерфейса</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -33,6 +33,68 @@
     <!-- Основное содержимое -->
     <main id="main">
         <div class="container">
+             <section id="table">
+                <h2>ТАБЛИЦА</h2>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Наименование</th>
+                            <th>Категория</th>
+                            <th>Цена</th>
+                            <th>Количество</th>
+                            <th>Статус</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>Ноутбук ASUS</td>
+                            <td>Электроника</td>
+                            <td>45 000 ₽</td>
+                            <td>12</td>
+                            <td>В наличии</td>
+                        </tr>
+                        <tr>
+                            <td>002</td>
+                            <td>Смартфон Samsung</td>
+                            <td>Электроника</td>
+                            <td>25 000 ₽</td>
+                            <td>8</td>
+                            <td>В наличии</td>
+                        </tr>
+                        <tr>
+                            <td>003</td>
+                            <td>Наушники Sony</td>
+                            <td>Аксессуары</td>
+                            <td>8 500 ₽</td>
+                            <td>25</td>
+                            <td rowspan="2">Ожидается</td>
+                        </tr>
+                        <tr>
+                            <td>004</td>
+                            <td>Мышь беспроводная</td>
+                            <td>Аксессуары</td>
+                            <td>2 300 ₽</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>005</td>
+                            <td>Монитор Dell</td>
+                            <td>Электроника</td>
+                            <td>18 000 ₽</td>
+                            <td>5</td>
+                            <td>В наличии</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Итого товаров:</td>
+                            <td>98 800 ₽</td>
+                            <td>50</td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
             <section id="links">
                 <h2>Список гиперссылок</h2>
                 
@@ -112,69 +174,6 @@
                         <a href="ftp://s0195835:pass456@ftp.myserver.com/1/reg.txt" title="FTP ссылка">Ссылка на FTP сервер</a>
                     </li>
                 </ul>
-            </section>
-
-            <section id="table">
-                <h2>ТАБЛИЦА</h2>
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Наименование</th>
-                            <th>Категория</th>
-                            <th>Цена</th>
-                            <th>Количество</th>
-                            <th>Статус</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>001</td>
-                            <td>Ноутбук ASUS</td>
-                            <td>Электроника</td>
-                            <td>45 000 ₽</td>
-                            <td>12</td>
-                            <td>В наличии</td>
-                        </tr>
-                        <tr>
-                            <td>002</td>
-                            <td>Смартфон Samsung</td>
-                            <td>Электроника</td>
-                            <td>25 000 ₽</td>
-                            <td>8</td>
-                            <td>В наличии</td>
-                        </tr>
-                        <tr>
-                            <td>003</td>
-                            <td>Наушники Sony</td>
-                            <td>Аксессуары</td>
-                            <td>8 500 ₽</td>
-                            <td>25</td>
-                            <td rowspan="2">Ожидается</td>
-                        </tr>
-                        <tr>
-                            <td>004</td>
-                            <td>Мышь беспроводная</td>
-                            <td>Аксессуары</td>
-                            <td>2 300 ₽</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>005</td>
-                            <td>Монитор Dell</td>
-                            <td>Электроника</td>
-                            <td>18 000 ₽</td>
-                            <td>5</td>
-                            <td>В наличии</td>
-                        </tr>
-                        <tr>
-                            <td colspan="3">Итого товаров:</td>
-                            <td>98 800 ₽</td>
-                            <td>50</td>
-                            <td>-</td>
-                        </tr>
-                    </tbody>
-                </table>
             </section>
 
             <section id="form">
