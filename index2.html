@@ -4,22 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Задание 3 - Разработка пользовательского Web-интерфейса</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
 </head>
 <body>
-    <!-- Шапка сайта -->
-    <header id="header">
+    <header class="header">
         <div class="container">
-            <div class="logo">
-                <img src="image2.png" alt="Логотип сайта">
+            <div class="header-top">
+                <div class="logo">
+                    <img src="image2.png" alt="Логотип сайта">
+                </div>
+                <h1 class="site-title">Разработка пользовательского Web-интерфейса</h1>
             </div>
-            <div class="site-title">
-                <h1>Разработка пользовательского Web-интерфейса</h1>
-            </div>
-        </div>
-    </header>
-
-    <nav id="nav">
+           <nav id="nav">
         <div class="container">
             <ul class="menu">
                 <li><a href="#links">Ссылки</a></li>
@@ -29,12 +25,13 @@
             </ul>
         </div>
     </nav>
+        </div>
+    </header>
 
-    <!-- Основное содержимое -->
-    <main id="main">
+    <main class="main">
         <div class="container">
-             <section id="table">
-                <h2>ТАБЛИЦА</h2>
+            <section class="section table-section">
+                <h2>Таблица</h2>
                 <table class="data-table">
                     <thead>
                         <tr>
@@ -95,75 +92,55 @@
                     </tbody>
                 </table>
             </section>
+               
+
             <section id="links">
                 <h2>Список гиперссылок</h2>
                 
                 <ul class="links-list">
                     <li> <a href="http://kubsu.ru/" title="Абсолютная ссылка на КубГУ">абсолютная гиперссылка на главную страницу сайта КубГУ</a></li>
-                    
                     <li> <a href="https://kubsu.ru/" title="Абсолютная HTTPS ссылка на КубГУ">абсолютная гиперссылка на главную страницу сайта КубГУ(в протоколе https)</a></li>
-                    
                     <li> 
                         <figure>
-                            <a href="https://skillbox.ru/media/code/teg-img-v-html-dlya-vstavki-kartinok-atributy-primery-ispolzovaniya/#stk-1"><img src="https://cdn.skillbox.pro/wbd-front/skillbox-static/skillbox.svg" alt=Skillbox></a>
-                            
+                            <a href="https://skillbox.ru/media/code/teg-img-v-html-dlya-vstavki-kartinok-atributy-primery-ispolzovaniya/#stk-1"><img src="https://cdn.skillbox.pro/wbd-front/skillbox-static/skillbox.svg" alt=Skillbox></a> 
                         </figure>
                     </li>
-                    
                     <li> <a href="https://www.kubsu.ru/ab" title="Сокращенная ссылка">КубГУ</a></li>
-                    
                     <li> <a href="https://kubsu.ru" title="Сокращенная ссылка на главную">КубГУ</a></li>
-                    
                     <li>
                         <a id="s1">Фрагмент текущей страницы</a>
                         <br>
                         <a href="#s1" title="Перейти к фрагменту">Перейти к фрагменту</a>
                     </li>
-                    
                     <li> <a href="https://www.kubsu.ru/ru/search/content" title="Поиск на сайте">Поиск на сайте</a></li>
-                    
                     <li> <a href="https://www.kubsu.ru/ru/news/12345?id=67890" title="Новости с параметрами">Новости</a></li>
-                    
-                    <li> <a href="https://www.kubsu.ru/#:~:text=%D1%81%2009%3A00%20%D0%B4%D0%BE%2013%3A00%2C%20%D1%81%2013%3A30%20%D0%B4%D0%BE%2018%3A00" title="Ссылка с параметром">ссылка с параметром id в URL</a></li>
-                    
-                    <li> <a href="catalog.html" title="Текущий каталог">текущий каталог</a></li>
-                    
+                    <li> <a href="https://www.kubsu.ru/#:~:text=%D1%81%2009%3A00%20%D0%B4%D0%BE%2013%3A00%2C%20%D1%81%2013%3A30%20%D0%B4%D0%BE%2018%3A00" title="Ссылка с параметром">ссылка с параметром id в URL</a></li>                  
+                    <li> <a href="catalog.html" title="Текущий каталог">текущий каталог</a></li> 
                     <li> <a href="about/contacts.html" title="Каталог about">каталог about</a></li>
-                    
                     <li> <a href="../" title="Уровень выше">Ссылка на уровень выше</a></li>
-                    
                     <li> <a href="../../" title="Два уровня выше">Ссылка на 2 уровня выше</a></li>
-                    
                     <li> Данная ссылка предназначена <a href="https://www.kubsu.ru/ru/abiturient" title="Для абитуриентов">абитуриентам</a>, переходя по ней,вы получите всю нужную информацию.</li>
-                    
                      <li> <img src="image2.png" alt="Логотип КубГУ"  width="300" height="300" usemap="#Map1">
-            
              <map name="Map1"> 
                 <area shape="circle" coords="150,100,100" href="https://kubsu.ru/" alt="Логотип КубГУ" title="Перейти на официальный сайт">
                 <area shape="rect" coords="50,180,250,250" href="https://www.kubsu.ru/ru/university" alt="Название КубГУ" title="Перейти на страницу об университете">
              </map> <br>
              Нажмите на логотип, чтобы перейти на сайт КубГУ, или нажмите на надпись, чтобы перейти на страницу "Об университете". 
-        </li>
-                    
+        </li>       
                     <li> <a href="#" title="Пустая ссылка">Каталог1</a></li>
-                    
                     <li> <a title="Ссылка без href">Каталог2</a></li>
-                    
                     <li> 
                         <form action="http://kubsu.ru/" method="get" target="_blank">
                             <button type="submit" class="link-button">Посетить сайт КубГУ</button>
                         </form>
                     </li>
-                    
                     <li> <a href="https://example.com/" rel="nofollow" title="Запрещенная для поисковиков">запрещен переход поисковикам</a></li>
-                    
                     <li> 
                         <div class="noindex">
                             <meta name="robots" content="noindex">
                             запрещенная для индексации
                         </div>
                     </li>
-                    
                     <li> 
                         <h3>Нумерованный список</h3>
                         <ol>
@@ -176,54 +153,44 @@
                 </ul>
             </section>
 
-            <section id="form">
-                <h2>ФОРМА</h2>
-                <form class="user-form">
-                    <h3>Персональные данные</h3>
-                    
+            <section class="section form-section">
+                <h2>Форма</h2>
+                <form action="/submit" method="post" class="form">
                     <div class="form-group">
                         <label for="fio">ФИО:</label>
-                        <input type="text" id="fio" name="fio" required 
-                               oninvalid="this.setCustomValidity('пожалуйста, заполните данное поле')"
-                               oninput="this.setCustomValidity('')">
+                        <input type="text" id="fio" name="fio" required>
                     </div>
                     
                     <div class="form-group">
                         <label for="phone">Телефон:</label>
-                        <input type="tel" id="phone" name="phone" required 
-                               pattern="[0-9]+"
-                               oninvalid="this.setCustomValidity('пожалуйста вводите только цифры')"
-                               oninput="this.setCustomValidity('')">
+                        <input type="tel" id="phone" name="phone" required>
                     </div>
                     
                     <div class="form-group">
                         <label for="email">E-mail:</label>
-                        <input type="email" id="email" name="email" required 
-                               oninvalid="this.setCustomValidity('введите пожалуйста @')"
-                               oninput="this.setCustomValidity('')">
+                        <input type="email" id="email" name="email" required>
                     </div>
                     
                     <div class="form-group">
                         <label for="birthdate">Дата рождения:</label>
-                        <input type="date" id="birthdate" name="birthdate" required 
-                               oninvalid="this.setCustomValidity('пожалуйста, заполните данное поле')"
-                               oninput="this.setCustomValidity('')">
+                        <input type="date" id="birthdate" name="birthdate" required>
                     </div>
                     
                     <div class="form-group">
-                        <label>Пол:</label>
+                        <span class="label">Пол:</span>
                         <div class="radio-group">
-                            <input type="radio" id="male" name="gender" value="male" required>
-                            <label for="male">Мужской</label>
-                            
-                            <input type="radio" id="female" name="gender" value="female">
-                            <label for="female">Женский</label>
+                            <label class="radio-label">
+                                <input type="radio" name="gender" value="male" required> Мужской
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="gender" value="female"> Женский
+                            </label>
                         </div>
                     </div>
                     
                     <div class="form-group">
-                        <label for="languages">Любимый язык программирования:</label>
-                        <select id="languages" name="languages[]" multiple size="6" required>
+                        <label for="programming-languages">Любимый язык программирования:</label>
+                        <select id="programming-languages" name="languages" multiple size="6">
                             <option value="pascal">Pascal</option>
                             <option value="c">C</option>
                             <option value="cpp">C++</option>
@@ -236,22 +203,23 @@
                             <option value="prolog">Prolog</option>
                             <option value="scala">Scala</option>
                         </select>
-                        <div class="help-text">Для множественного выбора удерживайте Ctrl (Cmd на Mac)</div>
                     </div>
                     
                     <div class="form-group">
                         <label for="bio">Биография:</label>
-                        <textarea id="bio" name="bio" rows="5" required 
-                                 oninvalid="this.setCustomValidity('пожалуйста, заполните данное поле')"
-                                 oninput="this.setCustomValidity('')"></textarea>
+                        <textarea id="bio" name="bio" rows="5"></textarea>
                     </div>
                     
                     <div class="form-group">
-                        <input type="checkbox" id="agreement" name="agreement" required>
-                        <label for="agreement">С контрактом ознакомлен</label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="agreement" required>
+                            С контрактом ознакомлен(а)
+                        </label>
                     </div>
                     
-                    <button type="submit">Сохранить</button>
+                    <div class="form-group">
+                        <button type="submit" class="submit-btn">Сохранить</button>
+                    </div>
                 </form>
             </section>
         </div>
