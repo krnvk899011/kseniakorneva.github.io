@@ -1,107 +1,126 @@
-/* Общие стили */
+/* Mobile First стили (основные) */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.5;
+    line-height: 1.6;
     color: #333;
-    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .container {
-    width: 90%;
-    max-width: 960px;
-    margin: 0 auto;
+    width: 100%;
+    padding: 0 15px;
 }
 
 /* Шапка */
 #header {
-    background-color: #5792ce;
-    color: white;
+    background-color: #f8f9fa;
     padding: 15px 0;
+    border-bottom: 1px solid #dee2e6;
 }
 
 #header .container {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 .logo img {
-    width: 40px;
-    height: 40px;
-    margin-right: 15px;
+    max-width: 80px;
+    height: auto;
 }
 
 .site-title h1 {
-    font-size: 20px;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #495057;
 }
 
 /* Навигация */
 #nav {
-    background-color: #5792ce;
+    background-color: #343a40;
     padding: 10px 0;
 }
 
 .menu {
     list-style: none;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
 
 .menu li {
-    margin: 0 10px;
+    margin: 5px 0;
 }
 
 .menu a {
     color: white;
     text-decoration: none;
-    padding: 5px 10px;
+    padding: 8px 15px;
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s;
 }
 
 .menu a:hover {
-    text-decoration: underline;
+    background-color: #495057;
 }
 
-/* Основное содержимое */
+/* Основной контент */
 #main {
+    flex: 1;
     padding: 20px 0;
 }
 
-#main section {
+/* Порядок отображения для мобильных устройств */
+#links {
+    order: 2;
+}
+
+#table {
+    order: 1;
+}
+
+#form {
+    order: 3;
+}
+
+/* Секции */
+section {
     margin-bottom: 30px;
-    background: white;
     padding: 20px;
-    border: 1px solid #ddd;
+    background-color: #f8f9fa;
+    border-radius: 5px;
 }
 
 h2 {
-    color: #336699;
+    color: #495057;
     margin-bottom: 15px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #ddd;
-}
-
-h3 {
-    color: #4477aa;
-    margin: 15px 0 10px 0;
+    font-size: 1.3rem;
 }
 
 /* Список ссылок */
 .links-list {
-    list-style: decimal;
-    margin-left: 20px;
+    list-style: none;
 }
 
 .links-list li {
-    margin: 10px 0;
-    padding: 5px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 3px;
+    border-left: 3px solid #007bff;
 }
 
 .links-list a {
-    color: #336699;
+    color: #007bff;
     text-decoration: none;
 }
 
@@ -109,110 +128,208 @@ h3 {
     text-decoration: underline;
 }
 
-figure {
-    margin: 10px 0;
-    text-align: center;
-}
-
-figure img {
-    max-width: 100%;
-    border: 1px solid #ddd;
-}
-
-figcaption {
-    color: #666;
-    margin-top: 5px;
-}
-
-.noindex {
-    background-color: #f0f0f0;
-    padding: 5px;
-    border: 1px solid #ccc;
-}
-
 /* Таблица */
 .data-table {
     width: 100%;
     border-collapse: collapse;
-    margin: 15px 0;
+    margin-top: 15px;
+    font-size: 0.9rem;
 }
 
 .data-table th,
 .data-table td {
     padding: 8px;
-    border: 1px solid #ddd;
     text-align: left;
+    border: 1px solid #dee2e6;
 }
 
 .data-table th {
-    background-color: #f0f0f0;
+    background-color: #343a40;
+    color: white;
     font-weight: bold;
 }
 
 .data-table tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #f8f9fa;
+}
+
+.data-table tr:hover {
+    background-color: #e9ecef;
 }
 
 /* Форма */
 .user-form {
-    width: 100%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .form-group label {
     display: block;
-    font-weight: bold;
     margin-bottom: 5px;
+    font-weight: bold;
+    color: #495057;
 }
 
 .form-group input[type="text"],
 .form-group input[type="tel"],
 .form-group input[type="email"],
 .form-group input[type="date"],
-.form-group textarea,
-.form-group select {
+.form-group select,
+.form-group textarea {
     width: 100%;
     padding: 8px;
-    border: 1px solid #ccc;
+    border: 1px solid #ced4da;
+    border-radius: 3px;
+    font-size: 1rem;
 }
 
 .radio-group {
-    margin: 5px 0;
+    display: flex;
+    gap: 20px;
+    margin-top: 5px;
 }
 
 .radio-group label {
-    display: inline;
+    display: flex;
+    align-items: center;
     font-weight: normal;
-    margin-right: 15px;
+    margin-bottom: 0;
+}
+
+.radio-group input {
+    margin-right: 5px;
 }
 
 .help-text {
-    font-size: 12px;
-    color: #666;
-    margin-top: 3px;
+    font-size: 0.8rem;
+    color: #6c757d;
+    margin-top: 5px;
 }
 
-button {
-    background-color: #336699;
+button[type="submit"] {
+    background-color: #007bff;
     color: white;
     padding: 10px 20px;
     border: none;
+    border-radius: 3px;
     cursor: pointer;
+    font-size: 1rem;
 }
 
-button:hover {
-    background-color: #4477aa;
+button[type="submit"]:hover {
+    background-color: #0056b3;
 }
 
 /* Подвал */
 #footer {
-    background-color: #336699;
+    background-color: #343a40;
     color: white;
     text-align: center;
     padding: 20px 0;
-    margin-top: 30px;
+    margin-top: auto;
 }
 
+/* Медиа-запросы для планшетов (768px и выше) */
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 720px;
+        margin: 0 auto;
+    }
+    
+    #header .container {
+        flex-direction: row;
+        justify-content: flex-start;
+        text-align: left;
+    }
+    
+    .logo {
+        margin-right: 20px;
+    }
+    
+    .site-title h1 {
+        margin-top: 0;
+        font-size: 1.5rem;
+    }
+    
+    .menu {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .menu li {
+        margin: 0 10px;
+    }
+    
+    .menu a {
+        padding: 10px 20px;
+    }
+    
+    section {
+        padding: 30px;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .data-table {
+        font-size: 1rem;
+    }
+    
+    .data-table th,
+    .data-table td {
+        padding: 12px;
+    }
+}
+
+/* Медиа-запросы для десктопов (992px и выше) */
+@media screen and (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    #header .container {
+        justify-content: space-between;
+    }
+    
+    .menu {
+        justify-content: flex-end;
+    }
+    
+    .menu li {
+        margin: 0 15px;
+    }
+    
+    /* Возвращаем исходный порядок для десктопов */
+    #links {
+        order: 1;
+    }
+    
+    #table {
+        order: 2;
+    }
+    
+    #form {
+        order: 3;
+    }
+    
+    .form-group input[type="text"],
+    .form-group input[type="tel"],
+    .form-group input[type="email"],
+    .form-group input[type="date"],
+    .form-group select {
+        max-width: 400px;
+    }
+}
+
+/* Дополнительные медиа-запросы для больших экранов */
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
