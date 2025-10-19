@@ -1,324 +1,491 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Задание 3 - Разработка пользовательского Web-интерфейса</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header class=".header">
-      <nav class="nav">
-        <div class="logo">
-          <img
-            style="float: left; margin: 10px"
-            src="image2.png"
-            alt="Логотип сайта"
-          />
-        </div>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Адаптивный сайт на Bootstrap</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+<style>
+.custom-header {
+background: linear-gradient(135deg, #2c3e50 0%, #3243d9 100%);
+}
 
-        <ul class="nav-menu">
-          <li><a href="#links">Ссылки</a></li>
-          <li><a href="#table">Таблица</a></li>
-          <li><a href="#form">Форма</a></li>
-          <li><a href="#footer">Контакты</a></li>
-        </ul>
-        <div class="site-title h1">
-          <h1>WEB</h1>
-        </div>
-      </nav>
-    </header>
+.logo-img {
+width: 50px;
+height: 50px;
+border-radius: 8px;
+}
 
-    <main class="container">
-      <section id="links">
-        <h2>Список гиперссылок</h2>
+.nav-custom {
+width: 100%;
+}
 
-        <ul>
-          <li>
-            <a href="http://kubsu.ru/" title="Абсолютная ссылка на КубГУ"
-              >абсолютная гиперссылка на главную страницу сайта КубГУ</a
-            >
-          </li>
-          <li>
-            <a href="https://kubsu.ru/" title="Абсолютная HTTPS ссылка на КубГУ"
-              >абсолютная гиперссылка на главную страницу сайта КубГУ(в
-              протоколе https)</a
-            >
-          </li>
-          <li>
-            <figure>
-              <a
-                href="https://skillbox.ru/media/code/teg-img-v-html-dlya-vstavki-kartinok-atributy-primery-ispolzovaniya/#stk-1"
-                ><img
-                  src="https://cdn.skillbox.pro/wbd-front/skillbox-static/skillbox.svg"
-                  alt="Skillbox"
-              /></a>
-            </figure>
-          </li>
-          <li>
-            <a href="https://www.kubsu.ru/ab" title="Сокращенная ссылка"
-              >КубГУ</a
-            >
-          </li>
-          <li>
-            <a href="https://kubsu.ru" title="Сокращенная ссылка на главную"
-              >КубГУ</a
-            >
-          </li>
-          <li>
-            <a id="s1">Фрагмент текущей страницы</a>
-            <br />
-            <a href="#s1" title="Перейти к фрагменту">Перейти к фрагменту</a>
-          </li>
-          <li>
-            <a
-              href="https://www.kubsu.ru/ru/search/content"
-              title="Поиск на сайте"
-              >Поиск на сайте</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://www.kubsu.ru/ru/news/12345?id=67890"
-              title="Новости с параметрами"
-              >Новости</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://www.kubsu.ru/#:~:text=%D1%81%2009%3A00%20%D0%B4%D0%BE%2013%3A00%2C%20%D1%81%2013%3A30%20%D0%B4%D0%BE%2018%3A00"
-              title="Ссылка с параметром"
-              >ссылка с параметром id в URL</a
-            >
-          </li>
-          <li>
-            <a href="catalog.html" title="Текущий каталог">текущий каталог</a>
-          </li>
-          <li>
-            <a href="about/contacts.html" title="Каталог about"
-              >каталог about</a
-            >
-          </li>
-          <li><a href="../" title="Уровень выше">Ссылка на уровень выше</a></li>
-          <li>
-            <a href="../../" title="Два уровня выше">Ссылка на 2 уровня выше</a>
-          </li>
-          <li>
-            Данная ссылка предназначена
-            <a
-              href="https://www.kubsu.ru/ru/abiturient"
-              title="Для абитуриентов"
-              >абитуриентам</a
-            >, переходя по ней,вы получите всю нужную информацию.
-          </li>
-          <li>
-            <img
-              src="image2.png"
-              alt="Логотип КубГУ"
-              width="300"
-              height="300"
-              usemap="#Map1"
-            />
-            <map name="Map1">
-              <area
-                shape="circle"
-                coords="150,100,100"
-                href="https://kubsu.ru/"
-                alt="Логотип КубГУ"
-                title="Перейти на официальный сайт"
-              />
-              <area
-                shape="rect"
-                coords="50,180,250,250"
-                href="https://www.kubsu.ru/ru/university"
-                alt="Название КубГУ"
-                title="Перейти на страницу об университете"
-              />
-            </map>
-            <br />
-            Нажмите на логотип, чтобы перейти на сайт КубГУ, или нажмите на
-            надпись, чтобы перейти на страницу "Об университете".
-          </li>
-          <li><a href="#" title="Пустая ссылка">Каталог1</a></li>
-          <li><a title="Ссылка без href">Каталог2</a></li>
-          <li>
-            <form action="http://kubsu.ru/" method="get" target="_blank">
-              <button type="submit" class="link-button">
-                Посетить сайт КубГУ
-              </button>
-            </form>
-          </li>
-          <li>
-            <a
-              href="https://example.com/"
-              rel="nofollow"
-              title="Запрещенная для поисковиков"
-              >запрещен переход поисковикам</a
-            >
-          </li>
-          <li>
-            <div class="noindex">
-              <meta name="robots" content="noindex" />
-              запрещенная для индексации
-            </div>
-          </li>
-          <li>
-            <h3>Нумерованный список</h3>
-            <ol>
-              <li><a href="http://www.kubsu.ru" title="Title1">Title1</a></li>
-              <li><a href="http://www.kubsu.ru" title="Title2">Title2</a></li>
-              <li><a href="http://www.kubsu.ru" title="Title3">Title3</a></li>
-            </ol>
-            <a
-              href="ftp://s0195835:pass456@ftp.myserver.com/1/reg.txt"
-              title="FTP ссылка"
-              >Ссылка на FTP сервер</a
-            >
-          </li>
-        </ul>
-      </section>
-      <section id="table">
-        <h2>Таблица</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Наименование</th>
+.nav-custom .nav-link {
+color: white !important;
+font-weight: 500;
+padding: 0.5rem 1rem;
+border-radius: 6px;
+transition: all 0.3s ease;
+}
 
-              <th>Цена</th>
+.nav-custom .nav-link:hover {
+background-color: rgba(255, 255, 255, 0.1);
+transform: translateY(-2px);
+}
 
-              <th>Статус</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>001</td>
-              <td>Ноутбук ASUS</td>
+.table-custom th {
+background-color: #3243d9;
+color: white;
+border: none;
+}
 
-              <td>45 000 ₽</td>
+.table-custom tbody tr:nth-child(even) {
+background-color: #f8f9fa;
+}
 
-              <td>В наличии</td>
-            </tr>
-            <tr>
-              <td>002</td>
-              <td>Смартфон Samsung</td>
+.table-custom tbody tr:hover {
+background-color: #e3f2fd;
+}
 
-              <td>25 000 ₽</td>
+.links-list-custom li {
+border-left: 4px solid #3243d9;
+transition: all 0.3s ease;
+}
 
-              <td>В наличии</td>
-            </tr>
-            <tr>
-              <td>003</td>
-              <td>Наушники Sony</td>
+.links-list-custom li:hover {
+background-color: #e3f2fd;
+transform: translateX(5px);
+}
 
-              <td>8 500 ₽</td>
+.form-custom .form-control:focus {
+border-color: #3243d9;
+box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
 
-              <td rowspan="2">Ожидается</td>
-            </tr>
-            <tr>
-              <td>004</td>
-              <td>Мышь беспроводная</td>
+.btn-custom {
+background: linear-gradient(135deg, #3243d9 0%, #3d4cce 100%);
+border: none;
+padding: 0.75rem 2rem;
+font-weight: 600;
+transition: all 0.3s ease;
+}
 
-              <td>2 300 ₽</td>
-            </tr>
-            <tr>
-              <td>005</td>
-              <td>Монитор Dell</td>
+.btn-custom:hover {
+transform: translateY(-2px);
+box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
+}
 
-              <td>18 000 ₽</td>
+.footer-custom {
+background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+}
 
-              <td>В наличии</td>
-            </tr>
-            <tr>
-              <td colspan="3">Итого товаров:</td>
-              <td>98 800 ₽</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
+@media (max-width: 768px) {
+.mobile-order-1 {
+order: 1;
+}
 
-      <section id="form">
-        <h2>Форма</h2>
-        <form action="index.html" method="POST">
-          <label>
-            ФИО:<br />
-            <input
-              name="field-name-1"
-              placeholder="Иванов Иван Иванович"
-              required
-            /> </label
-          ><br />
-          <label>
-            Телефон:<br />
-            <input
-              name="field-tel"
-              type="tel"
-              minlength="12"
-              maxlength="12"
-              placeholder="+70000000000"
-              required
-            /> </label
-          ><br />
-          <label>
-            Email:<br />
-            <input
-              name="field-email"
-              type="email"
-              placeholder="your@email.com"
-              required
-            /> </label
-          ><br />
-          <label>
-            Дата рождения:<br />
-            <input name="field-date" type="date" required /> </label
-          ><br />
-          <label>
-            Пол:<br />
-            <input name="radio-gr1" type="radio" required />мужской
-          </label>
-          <label> <input name="radio-gr1" type="radio" />женский </label><br />
-          <label>
-            Любимый язык программирования:<br />
-            <select name="list1" multiple="multiple" required>
-              <option>Pascal</option>
-              <option>C</option>
-              <option>C++</option>
-              <option>Javascript</option>
-              <option>PHP</option>
-              <option>Python</option>
-              <option>Java</option>
-              <option>Haskel</option>
-              <option>Closure</option>
-              <option>Prolog</option>
-              <option>Scala</option>
-            </select> </label
-          ><br />
-          <label>
-            Биография:<br />
-            <textarea
-              name="field-name2"
-              placeholder="Введите текст..."
-              required
-            ></textarea></label
-          ><br />
-          <label>
-            <input name="check1" type="checkbox" required />С контрактом
-            ознакомлен(а) </label
-          ><br />
-          <label>
-            <input type="submit" value="Сохранить" />
-          </label>
-        </form>
-      </section>
-    </main>
+.mobile-order-2 {
+order: 2;
+}
 
-    <!-- Подвал сайта -->
-    <footer id="footer">
-      <div class="container">
-        <p>&copy; Корнева Ксения ПМ 22/1</p>
-        <p>Разработка пользовательского Web-интерфейса</p>
-      </div>
-    </footer>
-  </body>
+.mobile-order-3 {
+order: 3;
+}
+
+.nav-custom {
+width: auto;
+}
+
+.nav-custom .nav-link {
+border-bottom: none;
+padding: 0.5rem 1rem;
+border-radius: 6px;
+margin: 0 0.25rem;
+text-align: left;
+}
+}
+</style>
+</head>
+<body>
+<!-- Header -->
+<header class="custom-header text-white">
+<div class="container">
+<div class="row align-items-center py-3">
+<!-- Логотип и название сайта -->
+<div class="col-12 col-md-3 text-center text-md-start">
+<div class="d-flex align-items-center justify-content-center justify-content-md-start">
+<img src="image2.png" alt="Логотип" class="logo-img me-3">
+<h1 class="h4 mb-0 d-none d-md-block">WEB-4</h1>
+</div>
+</div>
+
+<!-- Название сайта для мобильных -->
+<div class="col-12 d-md-none text-center mt-2">
+<h1 class="h4 mb-0">WEB-4</h1>
+</div>
+
+<!-- Навигация -->
+<!-- Мобильная версия - вертикальный список -->
+<div class="d-md-none">
+<div class="d-flex flex-column">
+<a class="nav-link" href="#link1">
+<i class="bi bi-link-45deg me-2"></i>Меню
+</a>
+<a class="nav-link" href="#link2">
+<i class="bi bi-link-45deg me-2"></i>Каталог
+</a>
+<a class="nav-link" href="#link3">
+<i class="bi bi-link-45deg me-2"></i>Контакты
+</a>
+</div>
+</div>
+
+<!-- Десктопная версия - горизонтальное меню -->
+<div class="d-none d-md-flex justify-content-md-end">
+<a class="nav-link" href="#link1">
+<i class="bi bi-link-45deg me-2"></i>Меню
+</a>
+<a class="nav-link" href="#link2">
+<i class="bi bi-link-45deg me-2"></i>Каталог
+</a>
+<a class="nav-link" href="#link3">
+<i class="bi bi-link-45deg me-2"></i>Контакты
+</a>
+</div>
+</nav>
+</div>
+</div>
+</div>
+</header>
+
+<!-- Main Content -->
+<main class="py-4">
+<div class="container">
+<div class="row g-4">
+
+
+<!-- Список ссылок - на мобильных показывается второй -->
+<div class="col-12 mobile-order-2">
+<div class="card shadow-sm">
+<div class="card-header bg-primary text-white">
+<h2 class="h5 mb-0">
+<i class="bi bi-list-ul me-2"></i>Маркированный список гиперссылок
+</h2>
+</div>
+<div class="card-body">
+<ul class="list-group list-group-flush links-list-custom">
+<li class="list-group-item">
+<a href="http://kubsu.ru" class="text-decoration-none">
+<i class="bi bi-box-arrow-up-right me-2"></i>Абсолютная ссылка на kubsu.ru
+</a>
+</li>
+<li class="list-group-item">
+<a href="https://kubsu.ru" class="text-decoration-none">
+<i class="bi bi-shield-lock me-2"></i>Абсолютная ссылка на kubsu.ru (https)
+</a>
+</li>
+<li class="list-group-item">
+<a href="https://kubsu.ru" class="text-decoration-none">
+<img src="https://cdn.skillbox.pro/wbd-front/skillbox-static/skillbox.svg" height="200" alt="Ссылка-изображение" class="img-fluid me-2" style="max-height: 30px;">
+Ссылка-изображение
+</a>
+</li>
+<li class="list-group-item">
+<a href="https://www.kubsu.ru/ab" class="text-decoration-none">
+<i class="bi bi-link me-2"></i>Сокращенная ссылка на внутреннюю страницу
+</a>
+</li>
+<li class="list-group-item">
+<a href="https://kubsu.ru" class="text-decoration-none">
+<i class="bi bi-house me-2"></i>Сокращенная ссылка на главную страницу
+</a>
+</li>
+<li class="list-group-item">
+<a href="#fragment" class="text-decoration-none">
+<i class="bi bi-bookmark me-2"></i>Ссылка на фрагмент текущей страницы
+</a>
+</li>
+<li class="list-group-item">
+<a href="/page?param1=value1&param2=value2&param3=value3" class="text-decoration-none">
+<i class="bi bi-three-dots me-2"></i>Ссылка с тремя параметрами
+</a>
+</li>
+<li class="list-group-item">
+<a href="/page?id=123" class="text-decoration-none">
+<i class="bi bi-hash me-2"></i>Ссылка с параметром id
+</a>
+</li>
+<li class="list-group-item">
+<a href="current-page.html" class="text-decoration-none">
+<i class="bi bi-file-earmark me-2"></i>Относительная ссылка в текущем каталоге
+</a>
+</li>
+<li class="list-group-item">
+<a href="about/page.html" class="text-decoration-none">
+<i class="bi bi-folder me-2"></i>Относительная ссылка в каталоге about
+</a>
+</li>
+<li class="list-group-item">
+<a href="../page.html" class="text-decoration-none">
+<i class="bi bi-arrow-up me-2"></i>Относительная ссылка уровнем выше
+</a>
+</li>
+<li class="list-group-item">
+<a href="../../page.html" class="text-decoration-none">
+<i class="bi bi-arrow-up-up me-2"></i>Относительная ссылка двумя уровнями выше
+</a>
+</li>
+<li class="list-group-item">
+Это <a href="/link" class="text-decoration-none">контекстная ссылка</a> в тексте абзаца
+</li>
+<li class="list-group-item">
+<a href="https://example.com/page#section" class="text-decoration-none">
+<i class="bi bi-box-arrow-up-right me-2"></i>Ссылка на фрагмент стороннего сайта
+</a>
+</li>
+<li class="list-group-item">
+<div class="d-flex align-items-center">
+<img src="image2.png" alt="Логотип КубГУ" usemap="#htmlmap" class="img-fluid me-3" style="max-width: 200px;">
+<map name="htmlmap">
+    <area shape="circle" coords="150,100,100" href="https://kubsu.ru/" alt="Логотип КубГУ" >
+    <area shape="rect" coords="50,180,250,250" href="https://www.kubsu.ru/ru/university" alt="Название КубГУ">
+</map>
+<div></div>
+Нажмите на логотип, чтобы перейти на сайт КубГУ, или нажмите на
+надпись, чтобы перейти на страницу "Об университете".
+<div>
+<small class="text-muted"></small>
+</div>
+</div>
+</li>
+<li class="list-group-item">
+<a href="" class="text-decoration-none text-muted">
+<i class="bi bi-link-45deg me-2"></i>Ссылка с пустым href
+</a>
+</li>
+<li class="list-group-item">
+<span class="text-muted">
+<i class="bi bi-link me-2"></i>Ссылка без href
+</span>
+</li>
+<li class="list-group-item">
+<a href="/no-follow" rel="nofollow" class="text-decoration-none">
+<i class="bi bi-shield-exclamation me-2"></i>Ссылка с запретом перехода для поисковиков
+</a>
+</li>
+<li class="list-group-item">
+<a href="/no-index" rel="noindex" class="text-decoration-none">
+<i class="bi bi-eye-slash me-2"></i>Ссылка, запрещенная для индексации
+</a>
+</li>
+<li class="list-group-item">
+<ol class="mb-0">
+<li><a href="/link1" title="Подпись к первой ссылке" class="text-decoration-none">Ссылка 1</a></li>
+<li><a href="/link2" title="Подпись ко второй ссылке" class="text-decoration-none">Ссылка 2</a></li>
+<li><a href="/link3" title="Подпись к третьей ссылке" class="text-decoration-none">Ссылка 3</a></li>
+</ol>
+</li>
+<li class="list-group-item">
+<a href="ftp://user:password@ftp.example.com/file.txt" class="text-decoration-none">
+<i class="bi bi-hdd-stack me-2"></i>Ссылка на файл на сервере FTP с авторизацией
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<!-- Фрагмент страницы -->
+<div class="col-12 mobile-order-3">
+<div class="card shadow-sm">
+<div class="card-body">
+<h2 id="fragment" class="h5 card-title">
+<i class="bi bi-bookmark-fill me-2"></i>Фрагмент страницы
+</h2>
+<p class="card-text">Это целевой фрагмент для ссылки №6. При клике на соответствующую ссылку в списке выше, страница прокрутится к этому разделу.</p>
+</div>
+</div>
+</div>
+
+<!-- Таблица - на мобильных показывается первой -->
+<div class="col-12 mobile-order-1">
+<div class="card shadow-sm">
+<div class="card-header bg-primary text-white">
+<h2 class="h5 mb-0">
+<i class="bi bi-table me-2"></i>Таблица товаров
+</h2>
+</div>
+<div class="card-body p-0">
+<div class="table-responsive">
+<table class="table table-custom table-hover mb-0">
+<thead>
+<tr>
+<th>ID</th>
+<th>Наименование</th>
+<th>Категория</th>
+<th>Цена</th>
+<th>Количество</th>
+<th>Статус</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>001</td>
+<td>Ноутбук ASUS</td>
+<td>Электроника</td>
+<td>45000 ₽</td>
+<td>15</td>
+<td><span class="badge bg-success">В наличии</span></td>
+</tr>
+<tr>
+<td>002</td>
+<td>Смартфон Samsung</td>
+<td>Электроника</td>
+<td>25000 ₽</td>
+<td>8</td>
+<td><span class="badge bg-success">В наличии</span></td>
+</tr>
+<tr>
+<td>003</td>
+<td>Наушники Sony</td>
+<td rowspan="2">Аксессуары</td>
+<td>8500 ₽</td>
+<td>0</td>
+<td><span class="badge bg-danger">Нет в наличии</span></td>
+</tr>
+<tr>
+<td>004</td>
+<td>Мышь беспроводная</td>
+<td>1500 ₽</td>
+<td>25</td>
+<td><span class="badge bg-success">В наличии</span></td>
+</tr>
+<tr>
+<td>005</td>
+<td>Клавиатура Logitech</td>
+<td>Периферия</td>
+<td>4500 ₽</td>
+<td>12</td>
+<td><span class="badge bg-success">В наличии</span></td>
+</tr>
+<tr class="table-info">
+<td colspan="3"><strong>Итого товаров:</strong></td>
+<td><strong>84500 ₽</strong></td>
+<td><strong>60</strong></td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Форма - на мобильных показывается последней -->
+<div class="col-12 mobile-order-3">
+<div class="card shadow-sm">
+<div class="card-header bg-primary text-white">
+<h2 class="h5 mb-0">
+<i class="bi bi-pencil-square me-2"></i>Форма регистрации
+</h2>
+</div>
+<div class="card-body">
+<form class="form-custom">
+<div class="row g-3">
+<div class="col-12">
+<label for="fio" class="form-label">ФИО *</label>
+<input type="text" class="form-control" id="fio" required>
+</div>
+
+<div class="col-12 col-md-6">
+<label for="phone" class="form-label">Телефон *</label>
+<input type="tel" class="form-control" id="phone" required pattern="[0-9]+">
+</div>
+
+<div class="col-12 col-md-6">
+<label for="email" class="form-label">E-mail *</label>
+<input type="email" class="form-control" id="email" placeholder="your@email.com" required>
+</div>
+
+<div class="col-12 col-md-6">
+<label for="birthdate" class="form-label">Дата рождения *</label>
+<input type="date" class="form-control" id="birthdate" required>
+</div>
+
+<div class="col-12 col-md-6">
+<label class="form-label">Пол *</label>
+<div class="d-flex gap-3">
+<div class="form-check">
+<input class="form-check-input" type="radio" name="gender" id="male" required>
+<label class="form-check-label" for="male">Мужской</label>
+</div>
+<div class="form-check">
+<input class="form-check-input" type="radio" name="gender" id="female" required>
+<label class="form-check-label" for="female">Женский</label>
+</div>
+</div>
+</div>
+
+<div class="col-12">
+<label for="programming-languages" class="form-label">Любимый язык программирования</label>
+<select class="form-select" id="programming-languages" multiple size="4" required>
+<option value="pascal">Pascal</option>
+<option value="c">C</option>
+<option value="cpp">C++</option>
+<option value="javascript">JavaScript</option>
+<option value="php">PHP</option>
+<option value="python">Python</option>
+<option value="java">Java</option>
+<option value="haskel">Haskel</option>
+<option value="clojure">Clojure</option>
+<option value="prolog">Prolog</option>
+<option value="scala">Scala</option>
+</select>
+<div class="form-text">Для множественного выбора удерживайте Ctrl (Cmd на Mac)</div>
+</div>
+
+<div class="col-12">
+<label for="bio" class="form-label">Биография</label>
+<textarea class="form-control" id="bio" rows="4" required></textarea>
+</div>
+
+<div class="col-12">
+<div class="form-check">
+<input class="form-check-input" type="checkbox" id="agreement" required>
+<label class="form-check-label" for="agreement">
+С контрактом ознакомлен(а) *
+</label>
+</div>
+</div>
+
+<div class="col-12">
+<button type="submit" class="btn btn-custom text-white">
+<i class="bi bi-check-circle me-2"></i>Сохранить
+</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+
+<!-- Footer -->
+<footer class="footer-custom text-white py-4 mt-5">
+<div class="container">
+<div class="row">
+<div class="col-12 text-center">
+<p class="mb-0">&copy; 2025 Корнева Ксения.Разработка пользовательского Web-интерфейса .</p>
+</div>
+</div>
+</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
+
 
